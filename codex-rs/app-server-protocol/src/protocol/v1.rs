@@ -369,6 +369,7 @@ pub struct UserSavedConfig {
     pub model_reasoning_effort: Option<ReasoningEffort>,
     pub model_reasoning_summary: Option<ReasoningSummary>,
     pub model_verbosity: Option<Verbosity>,
+    pub model_temperature: Option<i8>,
     pub tools: Option<Tools>,
     pub profile: Option<String>,
     pub profiles: HashMap<String, Profile>,
@@ -383,6 +384,7 @@ pub struct Profile {
     pub model_reasoning_effort: Option<ReasoningEffort>,
     pub model_reasoning_summary: Option<ReasoningSummary>,
     pub model_verbosity: Option<Verbosity>,
+    pub model_temperature: Option<i8>,
     pub chatgpt_base_url: Option<String>,
 }
 

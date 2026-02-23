@@ -555,6 +555,7 @@ impl ModelClientSession {
         let prompt_cache_key = Some(self.client.state.conversation_id.to_string());
         let request = ResponsesApiRequest {
             model: model_info.slug.clone(),
+            temperature: model_info.temperature.map(|t| t as f32 / 10.0),
             instructions: instructions.clone(),
             input,
             tools,

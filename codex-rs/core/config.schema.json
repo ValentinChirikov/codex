@@ -466,6 +466,9 @@
         "model_reasoning_summary": {
           "$ref": "#/definitions/ReasoningSummary"
         },
+        "model_temperature": {
+          "type": "string"
+        },
         "model_verbosity": {
           "$ref": "#/definitions/Verbosity"
         },
@@ -1867,6 +1870,9 @@
     "model_supports_reasoning_summaries": {
       "description": "Override to force-enable reasoning summaries for the configured model.",
       "type": "boolean"
+    },
+    "model_temperature": {
+      "type": "string"
     },
     "model_verbosity": {
       "allOf": [

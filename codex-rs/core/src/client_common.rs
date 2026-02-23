@@ -250,6 +250,7 @@ mod tests {
         let tools: Vec<serde_json::Value> = vec![];
         let req = ResponsesApiRequest {
             model: "gpt-5.1".to_string(),
+            temperature: None,
             instructions: "i".to_string(),
             input,
             tools,
@@ -291,6 +292,7 @@ mod tests {
 
         let req = ResponsesApiRequest {
             model: "gpt-5.1".to_string(),
+            temperature: None,
             instructions: "i".to_string(),
             input,
             tools,
@@ -327,6 +329,7 @@ mod tests {
         let tools: Vec<serde_json::Value> = vec![];
         let req = ResponsesApiRequest {
             model: "gpt-5.1".to_string(),
+            temperature: None,
             instructions: "i".to_string(),
             input,
             tools,

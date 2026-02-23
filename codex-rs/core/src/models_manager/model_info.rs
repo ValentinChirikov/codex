@@ -45,6 +45,8 @@ pub(crate) fn with_config_overrides(mut model: ModelInfo, config: &Config) -> Mo
         };
     }
 
+    model.temperature = config.model_temperature.clone();
+
     if let Some(base_instructions) = &config.base_instructions {
         model.base_instructions = base_instructions.clone();
         model.model_messages = None;
@@ -62,6 +64,7 @@ pub(crate) fn model_info_from_slug(slug: &str) -> ModelInfo {
         slug: slug.to_string(),
         display_name: slug.to_string(),
         description: None,
+        temperature: None,
         default_reasoning_level: None,
         supported_reasoning_levels: Vec::new(),
         shell_type: ConfigShellToolType::Default,

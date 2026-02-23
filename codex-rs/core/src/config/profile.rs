@@ -27,6 +27,7 @@ pub struct ConfigProfile {
     pub plan_mode_reasoning_effort: Option<ReasoningEffort>,
     pub model_reasoning_summary: Option<ReasoningSummary>,
     pub model_verbosity: Option<Verbosity>,
+    pub model_temperature: Option<i8>,
     /// Optional path to a JSON model catalog (applied on startup only).
     pub model_catalog_json: Option<AbsolutePathBuf>,
     pub personality: Option<Personality>,
@@ -68,6 +69,7 @@ impl From<ConfigProfile> for codex_app_server_protocol::Profile {
             model_reasoning_effort: config_profile.model_reasoning_effort,
             model_reasoning_summary: config_profile.model_reasoning_summary,
             model_verbosity: config_profile.model_verbosity,
+            model_temperature: config_profile.model_temperature,
             chatgpt_base_url: config_profile.chatgpt_base_url,
         }
     }
